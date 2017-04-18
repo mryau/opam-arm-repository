@@ -12,6 +12,8 @@ build: [
     "--override"
     "bytecomp_c_compiler"
     "arm-oe-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv3  -mfloat-abi=softfp --sysroot=/home/ssp/build/tmp-glibc/sysroots/wolverine_v1 -fno-defer-pop -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC"
+    "-configure"
+    "--override"
     "native_c_compiler"
     "arm-oe-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv3  -mfloat-abi=softfp --sysroot=/home/ssp/build/tmp-glibc/sysroots/wolverine_v1 -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT"
     "-configure"
