@@ -7,6 +7,7 @@ build: [
   [
     "ocaml"
     "setup.ml"
+    "-debug"
     "-configure"
     "--override"
     "ocamlfind"
