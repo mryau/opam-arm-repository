@@ -1,0 +1,25 @@
+opam-version: "1"
+name: "lwt"
+version: "2.4.5"
+maintainer: "ssp.mryau@gmail.com"
+build: [
+  ["oasis" "setup"]
+  [
+    "ocaml"
+    "setup.ml"
+    "-configure"
+    "--override"
+    "ocamlfind"
+    "%{bin}%/arm-oe-linux-gnueabi-ocamlfind"
+    "--enable-ssl"
+  ]
+  ["ocaml" "setup.ml" "-build"]
+  ["ocaml" "setup.ml" "-install"]
+]
+remove: ["ocamlfind" "-toolchain" "arm" "remove" "lwt"]
+depends: [
+  "oasis" {= "0.4.4-1"}
+  "arm-ocamlfind"
+  "arm-ssl"
+  "ocaml-arm" {> "4.01"}
+]
